@@ -1,6 +1,6 @@
 <?php
 /**
-* Plugin Name: git code snippet
+* Plugin Name: git-code-snippet
 * Plugin URI: http://github.com/chlyoo/wp-git-code-snippet.git
 * Description: Tool to embed github source code into a post.
 * Version: 0.1.0
