@@ -9,6 +9,7 @@ This plugin provides the shortcode for gitcode embeding in a post.
 Shortcode:
 	[gitcode author='gitid' repo='repository name' branch='branch name' loc='location of file']
 		shows git code and hyperlink to it's raw and github repo
+	ex) [gitcode author='chlyoo' repo='wp-git-code-snippet' branch='main' loc='README.txt']
 
 == Installation ==
 Install like any other plugin. Unzip into wp-content/plugins/
