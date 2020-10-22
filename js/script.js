@@ -19,12 +19,11 @@ function snipit(){
 var block_queue = [];
 var count = 0;
 function genSnip(vars){
-	// var vars = {author: "chlyoo", repo: "jstudy", branch: "master", loc: "Hello.java"}; //임시코드
 	var block_map = [];
 	var gsnip_map = [];
 	jQuery.each(wp.data.select('core/block-editor').getBlocks(),
 		function(index,item){
-			if (item.attributes.content.includes('gsnip')){
+			if (JSON.stringify(item.attributes).includes('[gsnip'&&'author'&&'repo'&&'loc')){
 				gsnip_map.push(index);
 			} 
 			block_map[index] = item;
