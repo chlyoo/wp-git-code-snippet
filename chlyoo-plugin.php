@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 add_action( 'admin_enqueue_scripts', 'gsnip_plugin_script' );
 function gsnip_plugin_script(){
 	wp_enqueue_script( 'jquery' );
-	wp_register_script('git-code-snippet', plugin_dir_url(__FILE__) . 'js/script.js',  array('jquery'),'1.0.0', true);
+	wp_register_script('git-code-snippet', plugin_dir_url(__FILE__) . 'js/script.js',  array('jquery'),'1.0', true);
 	wp_enqueue_script('git-code-snippet');	
 }
 
@@ -35,7 +35,7 @@ function show_git_snippet($atts, $content=null){
 			'loc'=>'',
 		), $atts );
 		$instance = uniqid();
-		wp_register_script('git-code-snippet', plugin_dir_url(__FILE__) . 'js/script.js',  array('jquery'),'1.0.0', true);
+		wp_register_script('git-code-snippet', plugin_dir_url(__FILE__) . 'js/script.js',  array('jquery'),'1.0', true);
 		wp_enqueue_script('git-code-snippet');	
 		wp_localize_script('git-code-snippet', 'instance' . $instance , $a );
 		echo  '<script id="gsnip-'. $instance .'" class="gsnip-anchor" data-instance="' . $instance .'"></script>';
